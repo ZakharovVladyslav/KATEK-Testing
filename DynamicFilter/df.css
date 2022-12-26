@@ -1,0 +1,133 @@
+body {
+    background-color: #303030;
+
+    font-family: 'Courier New', Courier, monospace;
+
+    display: flex;  
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#initial-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#filter-input-label {
+    margin-top: 30px;
+
+    color: white;
+    letter-spacing: 3px;
+}
+
+#filter-for-add {
+    background-color: rgb(71, 71, 71);
+    
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+
+    padding: 3px 8px;
+
+    border: none;
+    border-radius: 5px;
+    border-bottom: 2px solid #00ffff;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+#filter-for-add:focus {
+    outline: none;
+}
+
+#add-remove-field {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 50px;
+}
+
+#add-filter {
+    background-color: transparent;
+    transition: background-color ease 0.1s;
+    
+    color: white;
+
+    border: 1px solid #00ffff;
+    border-radius: 3px;
+
+    padding: 5px 10px;
+    margin-top: 40px;
+    margin: 40px 10px 0 10px;
+
+    transform: scale(1.3)
+}
+
+#add-filter:hover, #remove-filter:hover {
+    background-color: #00ffff;
+    transition: background-color ease 0.1s;
+
+    cursor: pointer;
+}
+
+#main-form {
+    margin-top: 50px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#main-form div {
+    display: flex;
+    flex-direction: column;
+
+    margin: 15px 15px;
+}
+
+#main-form div label {
+    color: white;
+}
+
+#main-form div input {
+    background-color: rgb(71, 71, 71);
+    transition: background-color ease 0.1s;
+
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+
+    padding: 5px 10px;
+
+    border: none;
+    border-bottom: 1px solid #00ffff;
+    border-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+#main-form div input:focus {
+    outline: none;
+}
+
+#main-form div button {
+    background-color: transparent;
+    transition: background-color ease 0.1s;
+
+    color: white;
+
+    border: 1px solid #00ffff;
+    border-radius: 3px;
+
+    padding: 2px 6px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+
+#main-form div button:hover {
+    background-color: #00ffff;
+    transition: background-color ease 0.1s;
+
+    cursor: pointer;
+}
