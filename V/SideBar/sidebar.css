@@ -5,13 +5,32 @@
 body {
     background-color: #353535;
 
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: white;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #a7a7a7;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(52, 52, 52);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(52, 52, 52);
 }
 
 .main {
     margin: auto;
-    
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -42,9 +61,12 @@ body {
 }
 
 #side-section {
-    background-color:#353535;
+    background-color: #555555;
 
-    height: 100px;
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
     width: 0;
 
     position: fixed;
@@ -58,4 +80,95 @@ body {
     overflow-x: hidden;
     padding-top: 60px;
     transition: 0.5s ease-in-out;
+}
+
+#side-section p {
+    align-self: center;
+
+    margin-left: 10px;
+}
+
+#side-section select {
+    align-self: center;
+
+    background-color: #555555;
+    transition: background-color ease 0.2s;
+    color: white;
+
+    padding: 5px 10px;
+
+    border-radius: 2px;
+
+    margin-bottom: 20px;
+}
+
+#side-section select:hover {
+    background-color: var(--katek-blue);
+    transition: background-color ease 0.2s;
+
+    cursor: pointer;
+}
+
+#side-section select option {
+    background-color: #555555;
+}
+
+#side-section #filter-input-section {
+    align-self: center;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+#side-section div {
+    margin-top: 40px;
+
+    align-self: center;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#side-section div button {
+    background-color: transparent;
+    transition: background-color ease 0.1s;
+
+    color: white;
+
+    border: 1px solid #00ffff;
+    border-radius: 3px;
+
+    padding: 2px 6px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+
+#side-section div input {
+    background-color: rgba(161, 161, 161, 0.3);
+    transition: background-color ease 0.1s;
+
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+
+    max-width: 200px;
+
+    padding: 5px 10px;
+
+    border: none;
+    border-bottom: 1px solid #00ffff;
+    border-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+#side-section div input:focus {
+    outline: none;
+}
+
+#side-section div button:hover {
+    background-color: #00ffff;
+    transition: background-color ease 0.1s;
+
+    cursor: pointer;
 }
