@@ -1,0 +1,61 @@
+:root {
+    --katek-blue: #00ffff;
+}
+
+body {
+    background-color: #353535;
+
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+}
+
+.main {
+    margin: auto;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#open-side-bar {
+    display: none;
+}
+
+#open-side-bar-label {
+    float: left;
+    z-index: 1;
+    position: fixed;
+
+    background-color: transparent;
+
+    font-size: 1.5rem;
+    color: white;
+
+    border: none;
+    outline: none;
+}
+
+#open-side-bar-label:hover {
+    cursor: pointer;
+    transition: transform ease 0.3s;
+}
+
+#side-section {
+    background-color:#353535;
+
+    height: 100px;
+    width: 0;
+
+    position: fixed;
+    z-index: 1;
+
+    top: 0;
+    left: 0;
+
+    float: left;
+
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s ease-in-out;
+}

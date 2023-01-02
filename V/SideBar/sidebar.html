@@ -1,17 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <script src="https://kit.fontawesome.com/0fafdadec3.js" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="./sidebar.css">
     <script src="./sidebar.js" defer></script>
-    
+
     <title>Document</title>
 </head>
+
 <body>
-    <section class="main">
+
+    <section id='side-section'>
+        <p>Settings:</p>
+
+        <select name="KTK" id="selection">
+            <option value="KATEK" id="opt"></option>
+            <option value="KATEK" id="opt"></option>
+            <option value="KATEK" id="opt"></option>
+            <option value="KATEK" id="opt"></option>
+        </select>
+    </section>
+
+    <label for="open-side-bar" id="open-side-bar-label"><i class="fa-solid fa-gear"></i></label>
+    <input type="checkbox" id="open-side-bar"></i>
+
+    <section id="main" class="main">
         <h1 id="h1">Some text here</h1>
 
         <table>
@@ -24,9 +43,6 @@
             </tbody>
         </table>
     </section>
-
-    <section class="side-section">
-
-    </section>
 </body>
+
 </html>
