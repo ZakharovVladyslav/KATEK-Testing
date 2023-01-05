@@ -3,7 +3,7 @@ const tableElements = ['ProdCode', 'Customer', 'ProdName', 'ArticleNum', 'MatNum
 const tbody = document.createElement('tbody')
 const para = document.querySelector('#para')
 const showResButton = document.querySelector('#showRes')
-const filtersForm = document.querySelector('#filters-form')
+const filtersForm = document.querySelector('#input-section')
 
 let results = []
 
