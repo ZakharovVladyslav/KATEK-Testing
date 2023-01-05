@@ -6,8 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <script src="https://kit.fontawesome.com/0fafdadec3.js" crossorigin="anonymous"></script>
-
     <link rel="stylesheet" href="./sidebar.css">
     <script src="./sidebar.js" defer></script>
 
@@ -19,71 +17,19 @@
     <section id='side-section'>
         <p>Settings:</p>
 
-        <select name="KTK" id="selection">
-            <option id="opt">KATEK</option>
-            <option id="opt">KATEK</option>
-            <option id="opt">KATEK</option>
-            <option id="opt">KATEK</option>
-        </select>
+        <table id="table"></table>
 
-        <section id="filter-input-section">
-            <div id='div'>
-                <label id='div-label'><button type="button">&times</button>label</label>
-                <input id="div-input" value="input">
-            </div>
-
-            <div id='div'>
-                <label id='div-label'><button type="button">&times</button>label</label>
-                <input id="div-input" value="input">
-            </div>
-            
-            <div id='div'>
-                <label id='div-label'><button type="button">&times</button>label</label>
-                <input id="div-input" value="input">
-            </div>
-            
-            <div id='div'>
-                <label id='div-label'><button type="button">&times</button>label</label>
-                <input id="div-input" value="input">
-            </div>
-            
-            <div id='div'>
-                <label id='div-label'><button type="button">&times</button>label</label>
-                <input id="div-input" value="input">
-            </div>
-            
-            <div id='div'>
-                <label id='div-label'><button type="button">&times</button>label</label>
-                <input id="div-input" value="input">
-            </div>
-            
-            <div id='div'>
-                <label id='div-label'><button type="button">&times</button>label</label>
-                <input id="div-input" value="input">
-            </div>
-            
-            <div id='div'>
-                <label id='div-label'><button type="button">&times</button>label</label>
-                <input id="div-input" value="input">
-            </div>
-        </section>
+        <button type="button" id="showRes">Create Filters</button>
+        <form id="filters-form"></form>
     </section>
 
-    <label for="open-side-bar" id="open-side-bar-label"><i class="fa-solid fa-gear"></i></label>
+    <label for="open-side-bar" id="open-side-bar-label">&times</label>
     <input type="checkbox" id="open-side-bar"></i>
 
     <section id="main" class="main">
         <h1 id="h1">Some text here</h1>
 
-        <table>
-            <tbody>
-                <td id="i1">D1</td>
-                <td id="i2">D2</td>
-                <td id="i3">D3</td>
-                <td id="i4">D4</td>
-                <td id="i5">D5</td>
-            </tbody>
-        </table>
+        
     </section>
 </body>
 
