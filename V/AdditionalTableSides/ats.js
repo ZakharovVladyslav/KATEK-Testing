@@ -1,9 +1,36 @@
 const buttonNext = document.querySelector('#button-next')
 const buttonPrevious = document.querySelector('#button-previous')
 const table = document.querySelector('#main-table')
+const selectionTable = document.querySelector('#selection-table')
+const selectionTableSubmitButton = document.querySelector("#selection-table-submit")
 
 const thead = document.createElement('thead')
 const tbody = document.createElement('tbody')
+
+/* FUNCTION SECTION */
+const divideArr = (arr) => {
+    const resultArr = []
+
+    for (let i = 0; i < 3; i++) {
+        const innerArr = []
+        for (let j = 0; j < 3; j++) {
+            innerArr.push(arr[i * 3 + j])
+        }
+        resultArr.push(innerArr)
+    }
+
+    return resultArr
+}
+
+const getValues = (object) => {
+    const results = []
+
+    for (let values of Object.values(object))
+        results.push(values)
+
+    return results
+}
+/*--------------------------------------------*/
 
 let index = 0
 
@@ -12,7 +39,7 @@ if (index === 0)
 
 const arr = [
     [
-        { 'h1': 'd1', 'h2': 'd2', 'h3': 'd3' },
+        { 'h1': 'd1', 'h2': 'd2', 'h3': 'd3', },
         { 'h1': 'd11', 'h2': 'd22', 'h3': 'd33' },
         { 'h1': 'd111', 'h2': 'd222', 'h3': 'd333' },
         { 'h1': 'd1111', 'h2': 'd2222', 'h3': 'd3333' },
@@ -67,13 +94,55 @@ const arr = [
     ]
 ]
 
-const getValues = (object) => {
-    const results = []
+let allKeys = []
+let constantTableKeys = []
 
-    for (let values of Object.values(object))
-        results.push(values)
+arr.forEach(innerArray => {
+    innerArray.forEach(object => {
+        for (let key of Object.keys(object))
+            allKeys.push(key)
+    })
+})
 
-    return results
+allKeys = Array.from(new Set(allKeys))
+
+const selectionTableHeader = document.createElement('thead')
+const selectionTableBody = document.createElement('tbody')
+
+const dividedArray = divideArr(allKeys)
+
+for (let i = 0; i < dividedArray.length; i++) {
+    const tableRow = document.createElement('tr')
+
+    for (let j = 0; j < dividedArray[i].length; j++) {
+        const tableCell = document.createElement('td')
+        let pos = dividedArray[i][j]
+
+        tableCell.innerHTML = dividedArray[i][j]
+        tableCell.classList.add('sqr')
+
+        tableCell.addEventListener('click', () => {
+            constantTableKeys.indexOf(pos) === -1 ? constantTableKeys.push(pos) : constantTableKeys = constantTableKeys.filter(elem => elem !== pos)
+            tableCell.classList.toggle('selected')
+            console.log(constantTableKeys)
+        })
+
+        tableRow.appendChild(tableCell)
+    }
+
+    selectionTableBody.appendChild(tableRow)
+}
+
+selectionTable.appendChild(selectionTableBody)
+
+
+selectionTableSubmitButton.onclick = () => {
+    let dynamicTableKeys = [...allKeys]
+
+    const diff = constantTableKeys.filter(item => dynamicTableKeys.includes(item))
+
+    dynamicTableKeys = dynamicTableKeys.filter(item => !constantTableKeys.includes(item))
+
 }
 
 let keys = []
@@ -112,7 +181,6 @@ for (let i = 0; i < arr[index].length; i++) {
     for (let j = 0; j < values[i].length; j++) {
         const tableDataCell = document.createElement('td')
 
-        console.log(values)
         tableDataCell.innerHTML = values[i][j]
 
         tableDataRow.appendChild(tableDataCell)
@@ -185,7 +253,6 @@ buttonNext.addEventListener('click', () => {
         for (let j = 0; j < values[i].length; j++) {
             const tableDataCell = document.createElement('td')
 
-            console.log(values)
             tableDataCell.innerHTML = values[i][j]
 
             tableDataRow.appendChild(tableDataCell)
@@ -260,7 +327,6 @@ buttonPrevious.addEventListener('click', () => {
         for (let j = 0; j < values[i].length; j++) {
             const tableDataCell = document.createElement('td')
 
-            console.log(values)
             tableDataCell.innerHTML = values[i][j]
 
             tableDataRow.appendChild(tableDataCell)
