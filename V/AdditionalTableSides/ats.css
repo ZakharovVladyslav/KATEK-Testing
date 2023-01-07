@@ -1,0 +1,54 @@
+:root {
+    --katek-blue: #00ffff;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    background-color: rgb(50, 50, 50);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-table th {
+    background-color: #6a6a6a;
+
+    padding: 5px 10px;
+}
+
+.main-table td {
+    text-align: left;
+
+    background-color: rgb(208, 208, 208);
+
+    padding: 5px 10px;
+    margin: 5px 6px;
+}
+
+.main-table td:hover {
+    background-color: rgb(140, 140, 140);
+    transition: ;
+}
+
+.arrows button {
+    color: white;
+    background-color: transparent;
+
+    border: none;
+
+    margin-bottom: 4px;
+
+    font-size: 15px;
+}
+
+.arrows button:hover {
+    border: 1px solid var(--katek-blue);
+    border-radius: 3px;
+
+    margin-bottom: 3px;
+    
+    cursor: pointer;
+}
