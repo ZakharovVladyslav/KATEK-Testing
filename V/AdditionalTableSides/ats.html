@@ -6,20 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
     <link rel="stylesheet" href="./ats.css">
-    <script src="./ats.js" defer></script>
+    <script src="./atss.js" defer></script>
 </head>
 <body>
     <div class="headers-selection">
+        <button type="button" id="submit-button">Submit</button>
         <table id="selection-table"></table>
         <button type="button" id="selection-table-submit">Select</button>
     </div>
 
     <div class="arrows">
-        <button type="button" id="button-previous"><</button>
-        <button type="button" id="button-next">></button>
+        <button type="button" id="button-previous" class="previous-page"><i class="fa-solid fa-chevron-left"></i></button>
+        <button type="button" id="button-next" class="next-page"><i class="fa-solid fa-chevron-right"></i></button>
     </div>
-    <table id="main-table" class="main-table"></table>
+    
+    <div class="tables">
+        <table id="static-table" class="static-table"></table>
+        <table id="dynamic-table" class="dynamic-table"></table>
+    </div>
 
     <p id="next-values"></p>
     <p id="next-keys"></p>
