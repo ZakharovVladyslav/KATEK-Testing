@@ -1,36 +1,44 @@
 'use strict'
 
-const dataArr = [1, 2, 3, 4, 5, 6]
-
-//Filter section should be completed later
-
-/*
-const inpField1 = document.getElementById('field1').value 
-const inpField2 = document.getElementById('field2').value
-const inpField3 = document.getElementById('field3').value
-const inpField4 = document.getElementById('field4').value
-const inpField5 = document.getElementById('field5').value
-*/
-
 const button = document.querySelector('#submit-btn')
 const tblt = document.querySelector('#tblt')
 
-console.log(dataArr)
+const dataArr = [
+    { 'h1': 'd1', 'h2': 'd2', 'h3': 'd3', 'h4': 'd4', 'h5': 'd5', 'h6': 'd6', 'h7': 'd7', 'h8': 'd8', 'h9': 'd9', 'h10': 'd10', 'h11': 'd11', 'h12': 'd12', 'h13': 'd13' },
+    { 'h1': 'd11', 'h2': 'd22', 'h3': 'd33', 'h4': 'd44', 'h5': 'd55', 'h6': 'd66', 'h7': 'd77', 'h8': 'd88', 'h9': 'd99', 'h10': 'd100' },
+    { 'h1': 'd111', 'h2': 'd222', 'h3': 'd333', 'h4': 'd444', 'h5': 'd555', 'h6': 'd666', 'h7': 'd777', 'h8': 'd888', 'h9': 'd999', 'h10': 'd1000' },
+    { 'h1': 'd1111', 'h2': 'd2222', 'h3': 'd3333', 'h4': 'd4444', 'h5': 'd5555', 'h6': 'd6666', 'h7': 'd7777', 'h8': 'd8888', 'h9': 'd9999', 'h10': 'd10000' },
+    { 'h1': 'd1', 'h2': 'd2', 'h3': 'd3', 'h4': 'd4', 'h5': 'd5', 'h6': 'd6', 'h7': 'd7', 'h8': 'd8', 'h9': 'd9', 'h10': 'd10', 'h11': 'd11', 'h12': 'd12', 'h13': 'd13' },
+    { 'h1': 'd11', 'h2': 'd22', 'h3': 'd33', 'h4': 'd44', 'h5': 'd55', 'h6': 'd66', 'h7': 'd77', 'h8': 'd888', 'h9': 'd9', 'h10': 'd100' },
+    { 'h1': 'd111', 'h2': 'd222', 'h3': 'd333', 'h4': 'd444', 'h5': 'd555', 'h6': 'd666', 'h7': 'd777', 'h8': 'd888', 'h9': 'd9', 'h10': 'd1000' },
+    { 'h1': 'd1111', 'h2': 'd2222', 'h3': 'd3333', 'h4': 'd4444', 'h5': 'd5555', 'h6': 'd6666', 'h7': 'd7777', 'h8': 'd8888', 'h9': 'd9', 'h10': 'd10000' },
+    { 'h1': 'd1', 'h2': 'd2', 'h3': 'd3', 'h4': 'd4', 'h5': 'd5', 'h6': 'd6', 'h7': 'd7', 'h8': 'd8', 'h9': 'd9', 'h10': 'd10', 'h11': 'd11', 'h12': 'd12', 'h13': 'd13' },
+    { 'h1': 'd11', 'h2': 'd22', 'h3': 'd33', 'h4': 'd44', 'h5': 'd55', 'h6': 'd66', 'h7': 'd77', 'h8': 'd88', 'h9': 'd9', 'h10': 'd100' },
+    { 'h1': 'd111', 'h2': 'd222', 'h3': 'd333', 'h4': 'd444', 'h5': 'd555', 'h6': 'd666', 'h7': 'd777', 'h8': 'd888', 'h9': 'd9', 'h10': 'd1000' },
+    { 'h1': 'd1111', 'h2': 'd2222', 'h3': 'd3333', 'h4': 'd4444', 'h5': 'd5555', 'h6': 'd6666', 'h7': 'd7777', 'h8': 'd8888', 'h9': 'd9', 'h10': 'd10000' },
+    { 'h1': 'd1', 'h2': 'd2', 'h3': 'd3', 'h4': 'd4', 'h5': 'd5', 'h6': 'd6', 'h7': 'd7', 'h8': 'd8', 'h9': 'd9', 'h10': 'd10', 'h11': 'd11', 'h12': 'd12', 'h13': 'd13' },
+    { 'h1': 'd11', 'h2': 'd22', 'h3': 'd33', 'h4': 'd44', 'h5': 'd55', 'h6': 'd66', 'h7': 'd77', 'h8': 'd88', 'h9': 'd9', 'h10': 'd100' },
+    { 'h1': 'd111', 'h2': 'd222', 'h3': 'd333', 'h4': 'd444', 'h5': 'd555', 'h6': 'd666', 'h7': 'd777', 'h8': 'd888', 'h9': 'd9', 'h10': 'd1000' },
+    { 'h1': 'd1111', 'h2': 'd2222', 'h3': 'd3333', 'h4': 'd4444', 'h5': 'd5555', 'h6': 'd6666', 'h7': 'd7777', 'h8': 'd8888', 'h9': 'd9', 'h10': 'd10000' },
+]
 
 button.onclick = () => {
     const tbody = document.createElement('tbody')
 
     for (let i = 0; i < dataArr.length; i++) {
         const row = document.createElement('tr')
-        for (let j = 0; j < 3; j++) {
-            const cell = document.createElement('td')
-            cell.style.minHeight = '40px'
-            cell.style.minWidth = '40px'
-            cell.style.backgroundColor = 'rgb(120, 120, 120)'
-            cell.innerHTML = dataArr[i]
-            row.appendChild(cell)
+        for (let j = 0; j < 1; j++) {
+            for (let value of Object.values(dataArr[i])) {
+                const cell = document.createElement('td')
+                
+                cell.innerHTML = value
+
+                row.appendChild(cell)
+            }
+
+            tbody.appendChild(row)
         }
-        tbody.appendChild(row)
-    }   
-    tblt.appendChild(tbody)
+        tblt.appendChild(tbody)
+
+    }
 }
